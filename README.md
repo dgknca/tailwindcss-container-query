@@ -60,7 +60,7 @@ Utilities:
 | `container-type-style` | `container-type: style` |
 | `container-type-state` | `container-type: state` |
 
-There are no any `container-name` utilities by default. You should define your own utilities in `tailwind.confij.js`.
+There are no any `container-name` utilities by default. You should define your own utilities in `tailwind.config.js`.
 
 ## Example Usage
 
@@ -74,7 +74,7 @@ There are no any `container-name` utilities by default. You should define your o
 
 ```css
 @container (min-width: 96px) {
-  .cq-w-6\:bg-blue-400 {
+  .cq-w-6\:bg-yellow-400 {
     --tw-bg-opacity: 1;
     background-color: rgb(96 165 250 / var(--tw-bg-opacity));
   }
@@ -85,7 +85,7 @@ There are no any `container-name` utilities by default. You should define your o
 
 ```html
 <div class=" h-60 w-60 bg-gray-300 overflow-auto resize container-type-size">
-  <h1 class="bg-green-300 cq-w-sidebar-6:bg-blue-400">Resize the container and see the background color change</h1>
+  <h1 class="bg-green-300 cq-w-sidebar-6:bg-yellow-400">Resize the container and see the background color change</h1>
 </div>
 ```
 
@@ -101,11 +101,11 @@ module.exports = {
 }
 ```
 
-`.cq-w-sidebar-6:bg-blue-400` output:
+`.cq-w-sidebar-6:bg-yellow-400` output:
 
 ```css
 @container sidebar (min-width: 96px) {
-  .cq-w-6\:bg-blue-400 {
+  .cq-w-6\:bg-yellow-400 {
     --tw-bg-opacity: 1;
     background-color: rgb(96 165 250 / var(--tw-bg-opacity));
   }
