@@ -65,7 +65,7 @@ There are no any `container-name` utilities by default. You should define your o
 ## Example Usage
 
 ```html
-<div class=" h-60 w-60 bg-gray-300 overflow-auto resize container-type-size">
+<div class="overflow-auto bg-gray-300 resize  h-60 w-60 container-type-size">
   <h1 class="bg-green-300 cq-w-6:bg-yellow-400">Resize the container and see the background color change</h1>
 </div>
 ```
@@ -84,7 +84,7 @@ There are no any `container-name` utilities by default. You should define your o
 ## Using Container Names
 
 ```html
-<div class=" h-60 w-60 bg-gray-300 overflow-auto resize container-type-size">
+<div class="overflow-auto bg-gray-300 resize  h-60 w-60 container-type-size">
   <h1 class="bg-green-300 cq-w-sidebar-6:bg-yellow-400">Resize the container and see the background color change</h1>
 </div>
 ```
@@ -137,7 +137,3 @@ module.exports = {
 ```
 
 ## [Demo Page](https://dgknca.github.io/tailwindcss-container-query/)
-
-## TODO
-
-- [ ] Add tests
