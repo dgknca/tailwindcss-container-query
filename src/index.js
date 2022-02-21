@@ -50,7 +50,7 @@ const containerQuery = plugin(
           cqRule.append(container.nodes)
           container.append(cqRule)
           cqRule.walkRules(rule => {
-            rule.selector = `.${e(`cq-w-${queryName}${separator}`)}${rule.selector.slice(1)}`
+            rule.selector = `.${e(`cq-w-${nameKey}-${queryName}${separator}`)}${rule.selector.slice(1)}`
           })
         })
       })
@@ -74,7 +74,7 @@ const containerQuery = plugin(
           cqRule.append(container.nodes)
           container.append(cqRule)
           cqRule.walkRules(rule => {
-            rule.selector = `.${e(`cq-h-${queryName}${separator}`)}${rule.selector.slice(1)}`
+            rule.selector = `.${e(`cq-h-${nameKey}-${queryName}${separator}`)}${rule.selector.slice(1)}`
           })
         })
       })

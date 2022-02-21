@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-container-query",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A plugin that provides CSS Container Queries.",
   "main": "src/index.js",
   "author": "Doğukan Çavuş <dgknca@gmail.com>",

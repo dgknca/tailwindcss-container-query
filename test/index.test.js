@@ -154,10 +154,10 @@ it('should create the `container-name-sidebar` class', () => {
 it('should create a named container query at-rule', () => {
   const config = {
     ...defaultOptions,
-    content: [{ raw: String.raw`<div class="cq-w-sidebar-22:bg-yellow-200"></div>` }],
+    content: [{ raw: String.raw`<div class="cq-w-sd-22:bg-yellow-200"></div>` }],
     theme: {
       containerName: {
-        sidebar: 'sidebar'
+        sd: 'sidebar'
       }
     },
   }
@@ -165,7 +165,7 @@ it('should create a named container query at-rule', () => {
   return run('@tailwind utilities;', config).then((result) => {
     expect(result.css).toMatchCss(String.raw`
       @container sidebar (min-width: 352px) {
-        .cq-w-22\:bg-yellow-200 {
+        .cq-w-sd-22\:bg-yellow-200 {
           --tw-bg-opacity: 1;
           background-color: rgb(254 240 138 / var(--tw-bg-opacity));
         }
