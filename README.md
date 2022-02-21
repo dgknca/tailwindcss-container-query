@@ -65,7 +65,7 @@ There are no any `container-name` utilities by default. You should define your o
 ## Example Usage
 
 ```html
-<div class="overflow-auto bg-gray-300 resize  h-60 w-60 container-type-size">
+<div class="overflow-auto bg-gray-300 resize h-60 w-60 container-type-size">
   <h1 class="bg-green-300 cq-w-6:bg-yellow-400">Resize the container and see the background color change</h1>
 </div>
 ```
@@ -84,8 +84,8 @@ There are no any `container-name` utilities by default. You should define your o
 ## Using Container Names
 
 ```html
-<div class="overflow-auto bg-gray-300 resize  h-60 w-60 container-type-size">
-  <h1 class="bg-green-300 cq-w-sidebar-6:bg-yellow-400">Resize the container and see the background color change</h1>
+<div class="overflow-auto bg-gray-300 resize h-60 w-60 container-type-size container-name-sb">
+  <h1 class="bg-green-300 cq-w-sb-6:bg-yellow-400">Resize the container and see the background color change</h1>
 </div>
 ```
 
@@ -94,7 +94,7 @@ There are no any `container-name` utilities by default. You should define your o
 module.exports = {
   theme: {
     containerName: {
-      sidebar: 'sidebar'
+      sb: 'sidebar'
     },
     // ...
   }
