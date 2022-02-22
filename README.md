@@ -101,11 +101,11 @@ module.exports = {
 }
 ```
 
-`.cq-w-sidebar-6:bg-yellow-400` output:
+`.cq-w-sb-6:bg-yellow-400` output:
 
 ```css
 @container sidebar (min-width: 96px) {
-  .cq-w-6\:bg-yellow-400 {
+  .cq-w-sb-6\:bg-yellow-400 {
     --tw-bg-opacity: 1;
     background-color: rgb(96 165 250 / var(--tw-bg-opacity));
   }
