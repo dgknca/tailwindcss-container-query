@@ -129,9 +129,6 @@ module.exports = {
     containerType: {
       size: 'size',
     }
-  },
-  variants: {
-    containerName: ['responsive']
   }
 }
 ```
