@@ -1,7 +1,7 @@
 const plugin = require('tailwindcss/plugin')
 
 const containerQuery = plugin(
-  function ({ addUtilities, addVariant, theme, variants, e, postcss }) {
+  function ({ addUtilities, addVariant, matchVariant, theme, variants, e, postcss }) {
     const containerType = theme('containerType')
     const containerQuery = theme('containerQuery')
     const containerName = theme('containerName')
@@ -31,6 +31,13 @@ const containerQuery = plugin(
       ],
       variants('containerName')
     )
+
+    matchVariant({
+      'cq-h': (queryValue) => `@container (min-height: ${queryValue})`,
+    })
+    matchVariant({
+      'cq-w': (queryValue) => `@container (min-width: ${queryValue})`,
+    })
 
     Object.entries(containerQuery).map(([key, value]) => {
       return addVariant(`cq-w-${key}`, ({ container, separator }) => {
@@ -81,6 +88,7 @@ const containerQuery = plugin(
     })
   },
   {
+    experimental: { matchVariant: true },
     theme: {
       containerQuery: {
         4: '64px',
@@ -97,10 +105,6 @@ const containerQuery = plugin(
         state: 'state',
       },
       containerName: {}
-    },
-    variants: {
-      containerType: ['responsive'],
-      containerName: [],
     },
   }
 )
