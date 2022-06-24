@@ -56,6 +56,30 @@ it('should add the container query at-rule for `.cq-h-22` class and its contents
   })
 })
 
+it('should match the arbitrary values', () => {
+  const config = {
+    ...defaultOptions,
+    content: [{ raw: String.raw`<div class="cq-h-[450px]:bg-yellow-200 cq-w-[238px]:bg-yellow-200"></div>` }],
+  }
+
+  return run('@tailwind utilities;', config).then((result) => {
+    expect(result.css).toMatchCss(String.raw`
+      @container (min-height: 450px) {
+        .cq-h-\[450px\]\:bg-yellow-200 {
+          --tw-bg-opacity: 1;
+          background-color: rgb(254 240 138 / var(--tw-bg-opacity));
+        }
+      }
+      @container (min-width: 238px) {
+        .cq-w-\[238px\]\:bg-yellow-200 {
+          --tw-bg-opacity: 1;
+          background-color: rgb(254 240 138 / var(--tw-bg-opacity));
+        }
+      }
+    `)
+  })
+})
+
 it('should add the `container-type-size` class', () => {
   const config = {
     ...defaultOptions,

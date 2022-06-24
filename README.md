@@ -81,6 +81,23 @@ There are no any `container-name` utilities by default. You should define your o
 }
 ```
 
+#### You can use arbitrary variants too. (You should be using v3.1.0 or higher!)
+
+```html
+<div class="cq-w-[238px]:bg-yellow-400"></div>
+```
+
+`.cq-w-6:bg-yellow-400` output:
+
+```css
+@container (min-width: 238px) {
+  .cq-w-\[238px\]\:bg-yellow-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(96 165 250 / var(--tw-bg-opacity));
+  }
+}
+```
+
 ## Using Container Names
 
 ```html
