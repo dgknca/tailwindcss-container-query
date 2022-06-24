@@ -65,12 +65,10 @@ There are no any `container-name` utilities by default. You should define your o
 ## Example Usage
 
 ```html
-<div class="overflow-auto bg-gray-300 resize h-60 w-60 container-type-size">
-  <h1 class="bg-green-300 cq-w-6:bg-yellow-400">Resize the container and see the background color change</h1>
-</div>
+<div class="cq-w-6:bg-yellow-400"></div>
 ```
 
-`.cq-w-6:bg-yellow-400` output:
+Output:
 
 ```css
 @container (min-width: 96px) {
@@ -87,7 +85,7 @@ There are no any `container-name` utilities by default. You should define your o
 <div class="cq-w-[238px]:bg-yellow-400"></div>
 ```
 
-`.cq-w-6:bg-yellow-400` output:
+Output:
 
 ```css
 @container (min-width: 238px) {
@@ -101,9 +99,7 @@ There are no any `container-name` utilities by default. You should define your o
 ## Using Container Names
 
 ```html
-<div class="overflow-auto bg-gray-300 resize h-60 w-60 container-type-size container-name-sb">
-  <h1 class="bg-green-300 cq-w-sb-6:bg-yellow-400">Resize the container and see the background color change</h1>
-</div>
+<div class="cq-w-sb-6:bg-yellow-400"></div>
 ```
 
 ```js
@@ -118,7 +114,7 @@ module.exports = {
 }
 ```
 
-`.cq-w-sb-6:bg-yellow-400` output:
+Output:
 
 ```css
 @container sidebar (min-width: 96px) {
